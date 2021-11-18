@@ -1,0 +1,2 @@
+src-git MrH723_packages https://github.com/MrH723/openwrt-packages
+src-git wolplus https://github.com/siwind/luci-app-wolplus
