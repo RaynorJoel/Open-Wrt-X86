@@ -9,12 +9,20 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-cd lede/package/lean  
-rm -rf luci-theme-argon  
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git 
-git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
-git clone https://github.com/jerrykuku/luci-app-vssr.git 
-git clone https://github.com/siwind/luci-app-wolplus
+# 清除默认主题
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+#=================================================
+# 清除旧版argon主题并拉取最新版
+# 删除老argon主题
+rm -rf package/lean/luci-theme-argon
+#=================================================
+# 拉取argon主题
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+#=================================================
+# 增加插件包
+git clone https://github.com/siwind/luci-app-wolplus package/lean/
+git clone https://github.com/jerrykuku/lua-maxminddb.git package-temp/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git package-temp/luci-app-vssr
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.10/g' package/base-files/files/bin/config_generate
