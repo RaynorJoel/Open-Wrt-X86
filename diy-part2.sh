@@ -20,9 +20,9 @@ rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 #=================================================
 # 增加插件包
-git clone https://github.com/siwind/luci-app-wolplus package/lean/
-git clone https://github.com/jerrykuku/lua-maxminddb.git package-temp/lua-maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr.git package-temp/luci-app-vssr
+git clone https://github.com/siwind/luci-app-wolplus.git package/lean/luci-app-wolplus
+#git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.10/g' package/base-files/files/bin/config_generate
