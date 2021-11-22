@@ -15,9 +15,6 @@ git clone https://github.com/siwind/luci-app-wolplus.git package/lean/luci-app-w
 #git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
 #=================================================
-# 清除默认主题
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-#=================================================
 # 清除旧版argon主题并拉取最新版
 # 删除老argon主题
 rm -rf package/lean/luci-theme-argon
