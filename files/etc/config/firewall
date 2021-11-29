@@ -258,3 +258,13 @@ config include 'vssr'
 	option path '/var/etc/vssr.include'
 	option reload '1'
 
+config redirect
+	option enabled '1'
+	option target 'DNAT'
+	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '50057'
+	option dest_ip '192.168.2.57'
+	option dest_port '53389'
+	option name '50057'
+	option src 'lan'
