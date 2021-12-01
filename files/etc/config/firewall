@@ -157,15 +157,54 @@ config redirect
 	option src 'lan'
 
 config redirect
-	option enabled '1'
 	option target 'DNAT'
+	option dest 'lan'
 	option proto 'tcp udp'
 	option src_dport '50055'
-	option dest_ip '192.168.2.55'
+	option dest_ip '192.168.2.70'
 	option dest_port '53389'
 	option name '50055'
 	option src 'lan'
+
+config redirect
+	option target 'DNAT'
 	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '50057'
+	option dest_ip '192.168.2.70'
+	option dest_port '53389'
+	option name '50057'
+	option src 'lan'
+
+config redirect
+	option target 'DNAT'
+	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '5000'
+	option dest_ip '192.168.2.5'
+	option dest_port '5000'
+	option name '8.5000'
+	option src 'lan'
+
+config redirect
+	option target 'DNAT'
+	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '5443'
+	option dest_ip '192.168.2.5'
+	option dest_port '5443'
+	option name '8.5443'
+	option src 'lan'
+
+config redirect
+	option target 'DNAT'
+	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '59090'
+	option dest_ip '192.168.2.70'
+	option dest_port '59090'
+	option name '59090'
+	option src 'lan'
 
 config include 'miniupnpd'
 	option type 'script'
@@ -258,13 +297,3 @@ config include 'vssr'
 	option path '/var/etc/vssr.include'
 	option reload '1'
 
-config redirect
-	option enabled '1'
-	option target 'DNAT'
-	option dest 'lan'
-	option proto 'tcp udp'
-	option src_dport '50057'
-	option dest_ip '192.168.2.57'
-	option dest_port '53389'
-	option name '50057'
-	option src 'lan'
