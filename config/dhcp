@@ -1,0 +1,197 @@
+
+config dnsmasq
+	option domainneeded '1'
+	option localise_queries '1'
+	option rebind_protection '1'
+	option rebind_localhost '1'
+	option local '/lan/'
+	option domain 'lan'
+	option expandhosts '1'
+	option authoritative '1'
+	option readethers '1'
+	option leasefile '/tmp/dhcp.leases'
+	option nonwildcard '1'
+	option localservice '1'
+	option ednspacket_max '1232'
+	option localuse '1'
+	option port '53'
+	list server '127.0.0.1#50053'
+	option noresolv '1'
+
+config dhcp 'lan'
+	option interface 'lan'
+	option dhcpv4 'server'
+	option ra_slaac '1'
+	list ra_flags 'managed-config'
+	list ra_flags 'other-config'
+	option ignore '1'
+
+config dhcp 'wan'
+	option interface 'wan'
+	option ignore '1'
+
+config odhcpd 'odhcpd'
+	option maindhcp '0'
+	option leasefile '/tmp/hosts/odhcpd'
+	option leasetrigger '/usr/sbin/odhcpd-update'
+	option loglevel '4'
+
+config srvhost
+	option srv '_vlmcs._tcp'
+	option target 'OpenWrt'
+	option port '1688'
+	option class '0'
+	option weight '100'
+
+config host
+	option mac '74:7d:24:aa:e5:d6'
+	option ip '192.168.2.3'
+
+config host
+	option mac '02:11:32:17:9f:43'
+	option ip '192.168.2.5'
+
+config host
+	option mac 'dc:d8:7c:2a:5c:d0'
+	option ip '192.168.2.6'
+
+config host
+	option mac 'dc:d8:7c:29:b7:88'
+	option ip '192.168.2.7'
+
+config host
+	option mac '8c:be:be:20:07:6b'
+	option ip '192.168.2.8'
+
+config host
+	option mac 'b0:41:1d:d7:3d:84'
+	option ip '192.168.2.40'
+
+config host
+	option mac 'f0:79:59:8d:e1:5e'
+	option ip '192.168.2.50'
+
+config host
+	option mac 'CA:13:A2:76:A1:C2'
+	option ip '192.168.2.51'
+
+config host
+	option mac '4C:49:E3:4F:B2:30'
+	option ip '192.168.2.52'
+
+config host
+	option mac '26:84:03:46:a4:09'
+	option ip '192.168.2.55'
+
+config host
+	option mac 'CA:55:FD:8E:94:CF'
+	option ip '192.168.2.56'
+
+config host
+	option mac '8a:ac:23:30:17:1b'
+	option ip '192.168.2.57'
+
+config host
+	option mac 'C4:46:19:39:F5:E7'
+	option ip '192.168.2.58'
+
+config host
+	option mac 'C8:0A:A9:BC:79:E9'
+	option ip '192.168.2.59'
+
+config host
+	option mac 'a8:9c:ed:9e:77:50'
+	option ip '192.168.2.60'
+
+config host
+	option mac '20:82:C0:6D:1A:64'
+	option ip '192.168.2.61'
+
+config host
+	option mac '94:DE:80:FA:99:EF'
+	option ip '192.168.2.70'
+
+config host
+	option mac '50:8F:4C:6D:F1:AC'
+	option ip '192.168.2.71'
+
+config host
+	option mac '74:51:BA:EB:AB:36'
+	option ip '192.168.2.72'
+
+config host
+	option mac 'ca:31:77:03:59:12'
+	option ip '192.168.2.80'
+
+config host
+	option mac 'ca:ab:30:ab:03:0f'
+	option ip '192.168.2.81'
+
+config host
+	option mac 'ca:9d:ec:ec:1d:f2'
+	option ip '192.168.2.82'
+
+config host
+	option mac 'ca:7b:6f:2e:0f:c5'
+	option ip '192.168.2.83'
+
+config host
+	option mac '28:6C:07:A0:0D:5B'
+	option ip '192.168.2.180'
+
+config host
+	option mac 'b0:f8:93:60:66:16'
+	option ip '192.168.2.181'
+
+config host
+	option mac '28:6C:07:2E:B9:B2'
+	option ip '192.168.2.182'
+
+config host
+	option mac 'F0:B4:29:04:47:C6'
+	option ip '192.168.2.183'
+
+config host
+	option mac 'F0:B4:29:CE:76:8A'
+	option ip '192.168.2.184'
+
+config host
+	option mac 'b0:f8:93:11:35:80'
+	option ip '192.168.2.185'
+
+config host
+	option mac 'F0:B4:29:B7:7C:0A'
+	option ip '192.168.2.187'
+
+config host
+	option mac '28:6C:07:22:EA:36'
+	option ip '192.168.2.188'
+
+config host
+	option mac '8c:be:be:4e:b7:47'
+	option ip '192.168.2.189'
+
+config host
+	option mac '78:11:DC:50:47:67'
+	option ip '192.168.2.190'
+
+config host
+	option mac '5c:ff:ff:94:d5:b3'
+	option ip '192.168.2.191'
+
+config host
+	option mac '34:5B:BB:E2:8F:D2'
+	option ip '192.168.2.192'
+
+config host
+	option mac 'C8:93:46:38:05:61'
+	option ip '192.168.2.193'
+
+config host
+	option mac '40:31:3C:54:48:2D'
+	option ip '192.168.2.194'
+
+config host
+	option mac '7C:49:EB:1D:F7:AF'
+	option ip '192.168.2.195'
+
