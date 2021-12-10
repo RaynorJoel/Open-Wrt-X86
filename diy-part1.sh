@@ -9,13 +9,12 @@
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
-
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # Add a feed source
 #echo 'src-git MrH723_packages https://github.com/MrH723/openwrt-packages' >>feeds.conf.default
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-./scripts/feeds clean
-./scripts/feeds update -a
-./scripts/feeds install -a
+#./scripts/feeds clean
+#./scripts/feeds update -a
+#./scripts/feeds install -a
