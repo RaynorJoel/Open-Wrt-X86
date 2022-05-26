@@ -17,7 +17,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-v
 #=================================================
 # 清除旧版
 # 删除
-rm -rf package/lean/luci-theme-argon
+rm -rf package/lean/themes/luci-theme-argon
 rm -rf package/lean/luci-app-argon-config
 #=================================================
 # 拉取
