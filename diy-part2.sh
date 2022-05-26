@@ -12,8 +12,8 @@
 #=================================================
 # 增加插件包
 git clone https://github.com/siwind/luci-app-wolplus.git package/lean/luci-app-wolplus
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
+#git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+#git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
 #=================================================
 # 清除旧版
 # 删除
