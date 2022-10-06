@@ -18,11 +18,11 @@ git clone https://github.com/siwind/luci-app-wolplus.git package/lean/luci-app-w
 #=================================================
 # 清除旧版
 # 删除
-# rm -rf package/feeds/luci/luci-theme-argon
+rm -rf package/feeds/luci/luci-theme-argon
 rm -rf package/feeds/kenzo/luci-app-argon-config
 #=================================================
 # 拉取
-# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/themes/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/themes/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 #=================================================
 # Modify default IP
