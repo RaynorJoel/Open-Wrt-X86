@@ -26,4 +26,4 @@ rm -rf package/feeds/kenzo/luci-app-argon-config
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 #=================================================
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.2.10/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/11.11.11.10/g' package/base-files/files/bin/config_generate
